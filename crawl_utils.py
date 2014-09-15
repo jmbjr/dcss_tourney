@@ -24,13 +24,7 @@ CLAN_BASE = 'clans'
 PLAYER_FILE_DIR = SCORE_FILE_DIR + '/' + PLAYER_BASE
 CLAN_FILE_DIR = SCORE_FILE_DIR + '/' + CLAN_BASE
 
-CAO_MORGUE_BASE = 'http://crawl.akrasiac.org/rawdata'
-CDO_MORGUE_BASE = 'http://crawl.develz.org/morgues/0.15'
-CLN_MORGUE_BASE = 'http://crawl.lantea.net/crawl/morgue'
-CSZO_MORGUE_BASE = 'http://dobrazupa.org/morgue'
 CBRO_MORGUE_BASE = 'http://crawl.berotato.org/crawl/morgue'
-CKR_MORGUE_BASE = 'http://kr.dobrazupa.org/morgue/0.15'
-RHF_MORGUE_BASE = 'http://rl.heh.fi/morgue'
 
 XXX_TOURNEY_BASE = ((LOCAL_TEST and ('file:///' + os.getcwd() + '/' + SCORE_FILE_DIR))
                    or WEB_BASE)
@@ -164,18 +158,8 @@ def morgue_link(xdict):
   name = xdict['player']
 
   stime = format_time( xdict['end_time'] )
-  if src.find('cao') >= 0:
-    base = CAO_MORGUE_BASE
-  elif src.find('cdo') >= 0:
-    base = CDO_MORGUE_BASE
-  elif src.find('cln') >= 0:
-    base = CLN_MORGUE_BASE
-  elif src.find('csz') >= 0:
-    base = CSZO_MORGUE_BASE
-  elif src.find('cbr') >= 0:
+  if src.find('cbro') >= 0:
     base = CBRO_MORGUE_BASE
-  else:
-    base = CKR_MORGUE_BASE
   return "%s/%s/morgue-%s-%s.txt" % (base, name, name, stime)
 
 def linked_text(key, link_fn, text=None):

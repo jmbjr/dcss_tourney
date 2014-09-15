@@ -92,7 +92,7 @@
               <span class="inline_heading">Note:</span> clan membership lines can be added to your ${version} rcfile on <b>any</b> of the public servers.
               If you add clan
               membership lines to more than one rcfile, then the rcfile on
-              the server earliest in the list CSZO, CAO, CBRO, CDO, CKR, CLN will take
+              the server earliest in the list CBRO will take
               precedence.
             </p>
           </div>

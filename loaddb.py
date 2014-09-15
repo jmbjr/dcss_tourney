@@ -31,45 +31,21 @@ GAME_VERSION = T_VERSION
 
 HARE_START_TIME = TEST_HARE_START_TIME or (T_YEAR + '09211000')
 
-CDO = 'http://crawl.develz.org/'
-CAO = 'http://crawl.akrasiac.org/'
-CSZO = 'http://dobrazupa.org/'
-CLN = 'http://crawl.lantea.net/crawl/'
 CBRO = 'http://crawl.berotato.org/crawl/'
-CKR = 'http://kr.dobrazupa.org/'
-RHF = 'http://rl.heh.fi/'
 
 # Log and milestone files. A tuple indicates a remote file with t[1]
 # being the URL to wget -c from.
 
-LOGS = TEST_LOGS or [
-         ('cao-logfile-0.15', CAO + 'logfile15'),
-         ('cdo-logfile-0.15', CDO + 'allgames-0.15.txt'),
-         ('cln-logfile-0.15', CLN + 'meta/0.15/logfile'),
-#         ('rhf-logfile-0.14', RHF + 'meta/crawl-0.14/logfile'),
-         ('cbro-logfile-0.15', CBRO + 'meta/0.15/logfile'),
-         ('ckr-logfile-0.15', CKR + 'www/0.15/logfile'),
-         ('cszo-logfile-0.15', CSZO + 'meta/0.15/logfile')]
-# this line should be used on CSZO instead:
-#         'cszo-logfile-0.15']
+LOGS = TEST_LOGS or ['cbro-logfile-0.15']
 
-MILESTONES = TEST_MILESTONES or [
-         ('cao-milestones-0.15', CAO + 'milestones15'),
-         ('cdo-milestones-0.15', CDO + 'milestones-0.15.txt'),
-         ('cln-milestones-0.15', CLN + 'meta/0.15/milestones'),
-#         ('rhf-milestones-0.14', RHF + 'meta/crawl-0.14/milestones'),
-         ('cbro-milestones-0.15', CBRO + 'meta/0.15/milestones'),
-         ('ckr-milestones-0.15', CKR + 'www/0.15/milestones'),
-         ('cszo-milestones-0.15', CSZO + 'meta/0.15/milestones')]
-# this line should be used on CSZO instead:
-#         'cszo-milestones-0.15']
+MILESTONES = TEST_MILESTONES or ['cbro-milestones-0.15']
 
 BLACKLIST_FILE = 'blacklist.txt'
 EXTENSION_FILE = 'modules.ext'
 TOURNAMENT_DB = 'tournament'
 COMMIT_INTERVAL = 3000
 # These rcfiles need to be updated from the servers every few hours.
-CRAWLRC_DIRECTORY_LIST = ['rcfiles-cszo/','rcfiles-cao/','rcfiles-cbro/','rcfiles-cdo/','rcfiles-ckr/','rcfiles-cln/']
+CRAWLRC_DIRECTORY_LIST = ['rcfiles-cbro/']
 
 LISTENERS = [ ]
 TIMERS = [ ]
