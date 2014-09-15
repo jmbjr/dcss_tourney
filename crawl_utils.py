@@ -10,7 +10,7 @@ UPDATE_INTERVAL = 7 * 60
 # Are we testing locally, or do we want output suitable for a website?
 # Test whether our username is the same that is used on the server.
 LOCAL_TEST = ('crawl-dev' != os.environ.get('USER'))
-WEB_BASE = 'http://crawl.berotato.org/crawl/tourney'
+WEB_BASE = 'http://crawl.berotato.org/crawl/tourney/html.tourney0.15'
 
 LOCK = None
 BASEDIR = LOCAL_TEST and os.environ['HOME'] or '/home/crawl-dev/tourney/dcss_tourney'
