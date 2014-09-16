@@ -23,7 +23,7 @@ END_TIME   = TEST_END_TIME or (T_YEAR + '09291000')
 
 # Deadline for forming teams.
 CLAN_DEADLINE = (TEST_CLAN_DEADLINE or
-                datetime.datetime(2014, 9, 29, 10)) # Sep 6, 20:00
+                datetime.datetime(2013, 9, 29, 10)) # Sep 6, 20:00
 
 DATE_FORMAT = '%Y%m%d%H%M'
 
@@ -32,6 +32,7 @@ GAME_VERSION = T_VERSION
 HARE_START_TIME = TEST_HARE_START_TIME or (T_YEAR + '09142000')
 
 CBRO = 'http://crawl.berotato.org/crawl/'
+WHITELISTFILE = 'player-whitelist.txt'
 
 # Log and milestone files. A tuple indicates a remote file with t[1]
 # being the URL to wget -c from.
@@ -691,11 +692,12 @@ def record_is_milestone(rec):
 def is_not_tourney(game):
   """A game started before the tourney start or played after the end
   doesn't count."""
-  mfclist=['johnstein', 'greynaab', 'jerbear56', 'zombiesheep', 'sleevener', 'porpoise',
-           'zureal', 'odiv', 'thenoid', 'advil', 'kaibutsu', 'slitherrr']
-
-  if not game.get('name') in mfclist:
-    return True
+  if os.path.exists(WHITELISTFILE): 
+    f.open(WHITELISTFILE)
+    whitelist=[x.strip().split() for x in f.readlines()
+               if x.strip() and not x.strip().startswith('#')]
+    if not (game.get('name') in whitelist):
+      return True
   
   start = game.get('start')
   if not start:
