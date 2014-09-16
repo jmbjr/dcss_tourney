@@ -18,18 +18,18 @@ T_YEAR = TEST_YEAR or '2014'
 T_VERSION = TEST_VERSION or '0.15'
 
 # Start and end of the tournament, UTC.
-START_TIME = TEST_START_TIME or (T_YEAR + '09221000')
+START_TIME = TEST_START_TIME or (T_YEAR + '09142000')
 END_TIME   = TEST_END_TIME or (T_YEAR + '09291000')
 
 # Deadline for forming teams.
 CLAN_DEADLINE = (TEST_CLAN_DEADLINE or
-                datetime.datetime(2014, 9, 2 , 10)) # Sep 6, 20:00
+                datetime.datetime(2014, 9, 29, 10)) # Sep 6, 20:00
 
 DATE_FORMAT = '%Y%m%d%H%M'
 
 GAME_VERSION = T_VERSION
 
-HARE_START_TIME = TEST_HARE_START_TIME or (T_YEAR + '09211000')
+HARE_START_TIME = TEST_HARE_START_TIME or (T_YEAR + '09142000')
 
 CBRO = 'http://crawl.berotato.org/crawl/'
 
