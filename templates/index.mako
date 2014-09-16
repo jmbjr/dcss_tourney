@@ -3,7 +3,7 @@
    from test_data import USE_TEST
    version = '0.15'
    year    = '2014'
-   title   = "Crawl %s Tournament Information" % version
+   title   = "Crawl %s MFC Challenges Information" % version
  %>
 <!DOCTYPE html>
 <html>
@@ -21,14 +21,18 @@
         <div class="heading">
           <h1>${title}</h1>
           <p class="fineprint">
-            Tournament starts on <a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140829T20">Aug 29, ${year} at 20:00 UTC</a>, and ends on
-            <a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140914T20">Sept 14, ${year} at 20:00 UTC</a>.
+            Currently under construction! Tentatively, challenges to begin on <a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140922T10">Sep, 22 ${year} at 10:00 UTC</a>, and ends on
+            <a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140929T10">Sept 29, ${year} at 10:00 UTC</a>.
           </p>
         </div>
         <hr>
 
         <div class="content">
           <p>
+            NOTE: the following is copied from the Official Tourney Page.
+            Current stats are only pulled from CBRO for games started
+            AFTER the 0.15 Tourney.
+
             Hello all! Welcome to the rules for the
             ${version} Dungeon Crawl Stone Soup Tournament. The simple part:
             Play on one of the <b>six</b> public servers (<a href="http://crawl.akrasiac.org">crawl.akrasiac.org</a>,
