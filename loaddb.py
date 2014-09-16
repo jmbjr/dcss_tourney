@@ -691,7 +691,12 @@ def record_is_milestone(rec):
 def is_not_tourney(game):
   """A game started before the tourney start or played after the end
   doesn't count."""
+  mfclist=['johnstein', 'greynaab', 'jerbear56', 'zombiesheep', 'sleevener', 'porpoise',
+           'zureal', 'odiv', 'thenoid', 'advil', 'kaibutsu', 'slitherrr']
 
+  if not game.get('name') in mfclist:
+    return True
+  
   start = game.get('start')
   if not start:
     return True
