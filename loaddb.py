@@ -15,11 +15,11 @@ import sys
 from test_data import USE_TEST, TEST_YEAR, TEST_VERSION, TEST_START_TIME, TEST_END_TIME, TEST_HARE_START_TIME, TEST_LOGS, TEST_MILESTONES, TEST_CLAN_DEADLINE
 
 T_YEAR = TEST_YEAR or '2014'
-T_VERSION = TEST_VERSION or '0.15'
+T_VERSION = TEST_VERSION or '0.14.1'
 
 # Start and end of the tournament, UTC.
-START_TIME = TEST_START_TIME or (T_YEAR + '09142000')
-END_TIME   = TEST_END_TIME or (T_YEAR + '09291000')
+START_TIME = TEST_START_TIME or (T_YEAR + '04280900')
+END_TIME   = TEST_END_TIME or (T_YEAR + '08040900')
 
 # Deadline for forming teams.
 CLAN_DEADLINE = (TEST_CLAN_DEADLINE or
@@ -29,7 +29,7 @@ DATE_FORMAT = '%Y%m%d%H%M'
 
 GAME_VERSION = T_VERSION
 
-HARE_START_TIME = TEST_HARE_START_TIME or (T_YEAR + '09142000')
+HARE_START_TIME = TEST_HARE_START_TIME or (T_YEAR + '04280900')
 
 CBRO = 'http://crawl.berotato.org/crawl/'
 WHITELISTFILE = 'player-whitelist.txt'
@@ -37,9 +37,9 @@ WHITELISTFILE = 'player-whitelist.txt'
 # Log and milestone files. A tuple indicates a remote file with t[1]
 # being the URL to wget -c from.
 
-LOGS = TEST_LOGS or ['cbro-logfile-0.15']
+LOGS = TEST_LOGS or ['cbro-logfile-0.14']
 
-MILESTONES = TEST_MILESTONES or ['cbro-milestones-0.15']
+MILESTONES = TEST_MILESTONES or ['cbro-milestones-0.14']
 
 BLACKLIST_FILE = 'blacklist.txt'
 EXTENSION_FILE = 'modules.ext'
