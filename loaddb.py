@@ -693,10 +693,9 @@ def is_not_tourney(game):
   """A game started before the tourney start or played after the end
   doesn't count."""
   if os.path.exists(WHITELISTFILE): 
-    f.open(WHITELISTFILE)
-    whitelist=[x.strip().split() for x in f.readlines()
-               if x.strip() and not x.strip().startswith('#')]
-    if not (game.get('name') in whitelist):
+    f = open(WHITELISTFILE)
+    whitelist=f.read().splitlines()
+    if not (game.get('name').lower() in whitelist):
       return True
   
   start = game.get('start')
