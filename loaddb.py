@@ -18,12 +18,12 @@ T_YEAR = TEST_YEAR or '2014'
 T_VERSION = TEST_VERSION or '0.15'
 
 # Start and end of the tournament, UTC.
-START_TIME = TEST_START_TIME or (T_YEAR + '08292000')
-END_TIME   = TEST_END_TIME or (T_YEAR + '09142000')
+START_TIME = TEST_START_TIME or ('200004112000')
+END_TIME   = TEST_END_TIME or ('202004272000')
 
 # Deadline for forming teams.
 CLAN_DEADLINE = (TEST_CLAN_DEADLINE or
-                datetime.datetime(2014, 9, 6, 20)) # Sep 6, 20:00
+                datetime.datetime(2000, 1, 1, 1)) # Apr 19, 20:00
 
 WHITELISTFILE = 'player-whitelist.txt'
 
@@ -31,7 +31,7 @@ DATE_FORMAT = '%Y%m%d%H%M'
 
 GAME_VERSION = T_VERSION
 
-HARE_START_TIME = TEST_HARE_START_TIME or (T_YEAR + '09132000')
+HARE_START_TIME = TEST_HARE_START_TIME or ('200004262000')
 
 CDO = 'http://crawl.develz.org/'
 CAO = 'http://crawl.akrasiac.org/'
@@ -49,29 +49,29 @@ LOGS = TEST_LOGS or [
          ('cdo-logfile-0.15', CDO + 'allgames-0.15.txt'),
          ('cln-logfile-0.15', CLN + 'meta/0.15/logfile'),
 #         ('rhf-logfile-0.14', RHF + 'meta/crawl-0.14/logfile'),
-         ('cbro-logfile-0.15', CBRO + 'meta/0.15/logfile'),
-         ('ckr-logfile-0.15', CKR + 'www/0.15/logfile'),
-         ('cszo-logfile-0.15', CSZO + 'meta/0.15/logfile')]
+#         ('cbro-logfile-0.14', CBRO + 'meta/0.14/logfile'),
+         ('ckr-logfile-0.14', CKR + 'www/0.14/logfile'),
+         ('cszo-logfile-0.14', CSZO + 'meta/0.14/logfile'),
 # this line should be used on CSZO instead:
-#         'cszo-logfile-0.15']
+         'cbro-logfile-0.14']
 
 MILESTONES = TEST_MILESTONES or [
          ('cao-milestones-0.15', CAO + 'milestones15'),
          ('cdo-milestones-0.15', CDO + 'milestones-0.15.txt'),
          ('cln-milestones-0.15', CLN + 'meta/0.15/milestones'),
 #         ('rhf-milestones-0.14', RHF + 'meta/crawl-0.14/milestones'),
-         ('cbro-milestones-0.15', CBRO + 'meta/0.15/milestones'),
-         ('ckr-milestones-0.15', CKR + 'www/0.15/milestones'),
-         ('cszo-milestones-0.15', CSZO + 'meta/0.15/milestones')]
+#         ('cbro-milestones-0.14', CBRO + 'meta/0.14/milestones'),
+         ('ckr-milestones-0.14', CKR + 'www/0.14/milestone'),
+         ('cszo-milestones-0.14', CSZO + 'meta/0.14/milestones'),
 # this line should be used on CSZO instead:
-#         'cszo-milestones-0.15']
+         'cbro-milestones-0.14']
 
 BLACKLIST_FILE = 'blacklist.txt'
 EXTENSION_FILE = 'modules.ext'
-TOURNAMENT_DB = 'tournament'
+TOURNAMENT_DB = 'tournament14'
 COMMIT_INTERVAL = 3000
 # These rcfiles need to be updated from the servers every few hours.
-CRAWLRC_DIRECTORY_LIST = ['rcfiles-cszo/','rcfiles-cao/','rcfiles-cbro/','rcfiles-cdo/','rcfiles-ckr/','rcfiles-cln/']
+CRAWLRC_DIRECTORY_LIST = ['rcfiles-cszo-0.14/','rcfiles-cao-0.14/','rcfiles-cbro-0.14/','rcfiles-cdo-0.14/','rcfiles-ckr-0.14/','rcfiles-cln-0.14/']
 
 LISTENERS = [ ]
 TIMERS = [ ]
