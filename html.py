@@ -25,6 +25,7 @@ BANNER_IMAGES = \
       'xom': [ 'banner_xom.png', 'Descent into Madness' ],
       'yredelemnul': [ 'banner_yredelemnul.png', 'The Harvest' ],
       'zin': [ 'banner_zin.png', 'Angel of Justice' ],
+      'foee': [ 'banner_zin.png', 'FoEE' ],
       '1top_player': [ 'player.png', 'Top Player'],
       '2top_clan':   [ 'clan.png', 'Top Clan' ],
       'header': ['banner_header.png', '' ],
@@ -126,6 +127,11 @@ BANNER_TEXT = \
         [ 'Enter either Pandemonium or any branch of Hell.',
           'Kill at least one unique pan lord and at least one unique hell lord over the course of the tournament.',
           'Kill all four unique pan lords and all four unique hell lords over the course of the tournament.',
+        ],
+      'foee':
+        [ 'Get a Rune during FoEE challenge!',
+          'Get a Win during FoEE challenge!!',
+          'Get the Highest MFC Score during FoEE challenge!!!',
         ],
       '1top_player':
         [ 'Individual with the most tournament points.',

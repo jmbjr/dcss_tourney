@@ -71,6 +71,9 @@ def act_on_milestone(c, mile):
 
   player = game_player(mile)
 
+  if mile['char'] == 'foee':
+    banner.award_banner(c,player,'foee',1)
+
   if mile['xl'] >= 13:
     banner.award_banner(c, player, 'okawaru', 1)
 
