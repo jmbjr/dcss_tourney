@@ -3,7 +3,7 @@
    from test_data import USE_TEST
    version = '0.14'
    year    = '2014'
-   title   = "Crawl %s Tournament Information" % version
+   title   = "MeFightClub Crawl Version %s Challenge Summary Website!" % version
  %>
 <!DOCTYPE html>
 <html>
@@ -21,16 +21,15 @@
         <div class="heading">
           <h1>${title}</h1>
           <p class="fineprint">
-            Tournament starts on <a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140411T20">Apr 11, ${year} at 20:00 UTC</a>, and ends on
-            <a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140427T20">Apr 27, ${year} at 20:00 UTC</a>.
+          This website logs ALL MFC v0.14 games played on all public servers!
           </p>
         </div>
         <hr>
 
         <div class="content">
           <p>
-            Hello all! Welcome to the rules for the
-            ${version} Dungeon Crawl Stone Soup Tournament. The simple part:
+            Hello all! Welcome to the MeFightClub Challenge Summary Website for version
+            ${version} of Dungeon Crawl Stone Soup. The simple part:
             Play on one of the <b>six</b> public servers (<a href="http://crawl.akrasiac.org">crawl.akrasiac.org</a>,
             <a href="http://crawl.beRotato.org">crawl.beRotato.org</a>,
             <a href="http://crawl.develz.org">crawl.develz.org</a>,
@@ -38,12 +37,15 @@
             <a href="http://crawl.lantea.net:8080">crawl.lantea.net</a>,
             or <a href="http://crawl.s-z.org">crawl.s-z.org</a>)
             and all of
-            your Crawl ${version} games that <b>start after <a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140411T20">20:00 UTC on
-            Apr 11</a></b> and <b>end before <a href="http://www.timeanddate.com/worldclock/fixedtime.html?iso=20140427T20">20:00 UTC on Apr 27</a></b> will
-            count toward the tournament.
+            your Crawl ${version} games will be tracked here!.
           </p>
 
           <p>
+            All points and banners on this site correspond to those in effect for the 0.14 official crawl tourney.
+            SOON the MeFightClub weekly/bi-weekly challenges will also be present on the site, with corresponding banners!
+            NOTE: there is currently NO clan support. That may come one day, but if you want a clan, wait for the official tournaments!
+          <p>
+            EVERYTHING BELOW THIS LINE IS VERBATIM FROM THE 0.14 CRAWL TOURNAMENT! 
             For players who participated in previous
             tournaments, please look at
             the <a href="#changes">Changes</a> section for a list of
