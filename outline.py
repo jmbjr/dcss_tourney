@@ -71,9 +71,6 @@ def act_on_milestone(c, mile):
 
   player = game_player(mile)
 
-  if mile['char'] == 'foee':
-    banner.award_banner(c,player,'foee',1)
-
   if mile['xl'] >= 13:
     banner.award_banner(c, player, 'okawaru', 1)
 
@@ -150,6 +147,8 @@ def do_milestone_rune(c, mile):
     banner.award_banner(c, mile['name'], 'vehumet', 1)
   if query.is_unbeliever(c, mile):
     banner.award_banner(c, mile['name'], 'trog', 2)
+#  if game_character(game).lower() == 'foee':
+  banner.award_banner(c, player, 'foee', 1)
 
 def do_milestone_ghost(c, mile):
   """When you kill a player ghost, you get two clan points! Otherwise this
