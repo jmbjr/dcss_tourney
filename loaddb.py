@@ -48,30 +48,30 @@ LOGS = TEST_LOGS or [
          ('cao-logfile-0.15', CAO + 'logfile15'),
          ('cdo-logfile-0.15', CDO + 'allgames-0.15.txt'),
          ('cln-logfile-0.15', CLN + 'meta/0.15/logfile'),
-#         ('rhf-logfile-0.14', RHF + 'meta/crawl-0.14/logfile'),
-#         ('cbro-logfile-0.14', CBRO + 'meta/0.14/logfile'),
-         ('ckr-logfile-0.14', CKR + 'www/0.14/logfile'),
-         ('cszo-logfile-0.14', CSZO + 'meta/0.14/logfile'),
+#         ('rhf-logfile-0.15', RHF + 'meta/crawl-0.15/logfile'),
+#         ('cbro-logfile-0.15', CBRO + 'meta/0.15/logfile'),
+         ('ckr-logfile-0.15', CKR + 'www/0.15/logfile'),
+         ('cszo-logfile-0.15', CSZO + 'meta/0.15/logfile'),
 # this line should be used on CSZO instead:
-         'cbro-logfile-0.14']
+         'cbro-logfile-0.15']
 
 MILESTONES = TEST_MILESTONES or [
          ('cao-milestones-0.15', CAO + 'milestones15'),
          ('cdo-milestones-0.15', CDO + 'milestones-0.15.txt'),
          ('cln-milestones-0.15', CLN + 'meta/0.15/milestones'),
-#         ('rhf-milestones-0.14', RHF + 'meta/crawl-0.14/milestones'),
-#         ('cbro-milestones-0.14', CBRO + 'meta/0.14/milestones'),
-         ('ckr-milestones-0.14', CKR + 'www/0.14/milestone'),
-         ('cszo-milestones-0.14', CSZO + 'meta/0.14/milestones'),
+#         ('rhf-milestones-0.15', RHF + 'meta/crawl-0.15/milestones'),
+#         ('cbro-milestones-0.15', CBRO + 'meta/0.15/milestones'),
+         ('ckr-milestones-0.15', CKR + 'www/0.15/milestones'),
+         ('cszo-milestones-0.15', CSZO + 'meta/0.15/milestones'),
 # this line should be used on CSZO instead:
-         'cbro-milestones-0.14']
+         'cbro-milestones-0.15']
 
 BLACKLIST_FILE = 'blacklist.txt'
 EXTENSION_FILE = 'modules.ext'
-TOURNAMENT_DB = 'tournament14'
+TOURNAMENT_DB = 'tournament15'
 COMMIT_INTERVAL = 3000
 # These rcfiles need to be updated from the servers every few hours.
-CRAWLRC_DIRECTORY_LIST = ['rcfiles-cszo-0.14/','rcfiles-cao-0.14/','rcfiles-cbro-0.14/','rcfiles-cdo-0.14/','rcfiles-ckr-0.14/','rcfiles-cln-0.14/']
+CRAWLRC_DIRECTORY_LIST = ['rcfiles-cszo-0.15/','rcfiles-cao-0.15/','rcfiles-cbro-0.15/','rcfiles-cdo-0.15/','rcfiles-ckr-0.15/','rcfiles-cln-0.15/']
 
 LISTENERS = [ ]
 TIMERS = [ ]

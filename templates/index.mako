@@ -21,7 +21,7 @@
         <div class="heading">
           <h1>${title}</h1>
           <p class="fineprint">
-          This website logs ALL MFC v0.14 games played on all public servers!
+          This website logs ALL MFC v0.15 games played on all public servers!
           </p>
         </div>
         <hr>
@@ -41,11 +41,11 @@
           </p>
 
           <p>
-            All points and banners on this site correspond to those in effect for the 0.14 official crawl tourney.
+            All points and banners on this site correspond to those in effect for the 0.15 official crawl tourney.
             SOON the MeFightClub weekly/bi-weekly challenges will also be present on the site, with corresponding banners!
             NOTE: there is currently NO clan support. That may come one day, but if you want a clan, wait for the official tournaments!
           <p>
-            EVERYTHING BELOW THIS LINE IS VERBATIM FROM THE 0.14 CRAWL TOURNAMENT! 
+            EVERYTHING BELOW THIS LINE IS VERBATIM FROM THE 0.15 CRAWL TOURNAMENT! 
             For players who participated in previous
             tournaments, please look at
             the <a href="#changes">Changes</a> section for a list of
