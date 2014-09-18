@@ -314,6 +314,13 @@ def crunch_winner(c, game):
   game_start = game_start_time(game)
   game_end = game_end_time(game)
 
+  # MFC challenge combo wins
+  foee_start = 201407210900
+  foee_end = 201408040900
+
+  if charabbrev.lower() == 'foee' and game_start >= foee_start and game_end <= foee_end:
+    banner.award_banner(c, player, 'foee', 2)
+
   # 20 clan points for first win for a particular combo in the tournament.
   if query.first_win_for_combo(c, charabbrev, game_end):
     assign_team_points(c, "combo_first_win:" + charabbrev, player, 20)
