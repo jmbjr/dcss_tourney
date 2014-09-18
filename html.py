@@ -26,6 +26,7 @@ BANNER_IMAGES = \
       'yredelemnul': [ 'banner_yredelemnul.png', 'The Harvest' ],
       'zin': [ 'banner_zin.png', 'Angel of Justice' ],
       'foee': [ 'banner_zin.png', 'FoEE' ],
+      'grar': [ 'banner_zin.png', 'GrAr' ],
       '1top_player': [ 'player.png', 'Top Player'],
       '2top_clan':   [ 'clan.png', 'Top Clan' ],
       'header': ['banner_header.png', '' ],
@@ -132,6 +133,11 @@ BANNER_TEXT = \
         [ 'Get a Rune during FoEE challenge!',
           'Get a Win during FoEE challenge!!',
           'Get the Highest MFC Score during FoEE challenge!!!',
+        ],
+      'grar':
+        [ 'Get a Rune during GrAr challenge!',
+          'Get a Win during GrAr challenge!!',
+          'Get the Highest MFC Score during GrAr challenge!!!',
         ],
       '1top_player':
         [ 'Individual with the most tournament points.',
