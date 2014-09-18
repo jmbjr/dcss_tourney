@@ -305,6 +305,26 @@ def game_start_time(g):
 def game_character(g):
   return g['char']
 
+def check_challenge(game, challengechar):
+  player = game['name']
+  charabbrev = game_character(game)
+  game_start = game_start_time(game)
+  game_end = game_end_time(game)
+
+  if challengechar == 'grar':
+    start = '201407070900'
+    end = '201407210900'
+  if challengechar == 'foee':
+    start = '201407210900'
+    end = '201408040900'
+  else:
+    return False
+
+  if game_start >= start and game_end <= end:
+    return True
+
+  return False
+
 def crunch_winner(c, game):
   """A game that wins could assign a variety of irrevocable points for a
   variety of different things. This function needs to calculate them all."""
@@ -315,15 +335,8 @@ def crunch_winner(c, game):
   game_end = game_end_time(game)
   
 # MFC challenge combo wins
-  foee_start = '201407210900'
-  foee_end = '201408040900'
-  grar_start = '201407070900'
-  grar_end = '201407210900'
-
-  if charabbrev.lower() == 'foee' and game_start >= foee_start and game_end <= foee_end:
-    banner.award_banner(c, player, 'foee', 2)
-  if charabbrev.lower() == 'grar' and game_start >= grar_start and game_end <= grar_end:
-    banner.award_banner(c, player, 'grar', 2)
+  if check_challenge(game, charabbrev.lower()):
+    banner.award_banner(c, player, charabbrev.lower(), 2)
 
   # 20 clan points for first win for a particular combo in the tournament.
   if query.first_win_for_combo(c, charabbrev, game_end):
