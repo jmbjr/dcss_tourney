@@ -44,7 +44,7 @@ def process_banners(c, player):
       banner[1](c, player)
 
 def assign_challenge_winner_banners(c):
-  award_banner(c, challenge_top_score(c,'hewr','201406090900', '201406230900')
+  award_banner(c, query.challenge_top_score(c, 'hewr', '201406090900', '201406230900'), 'hewr', 3)
 
 def assign_top_player_banners(c):
   rows = query_rows_with_ties(c, '''SELECT name, score_full
