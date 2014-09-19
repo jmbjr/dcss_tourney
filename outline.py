@@ -147,8 +147,8 @@ def do_milestone_rune(c, mile):
     banner.award_banner(c, mile['name'], 'vehumet', 1)
   if query.is_unbeliever(c, mile):
     banner.award_banner(c, mile['name'], 'trog', 2)
-#  if game_character(game).lower() == 'foee':
-  banner.award_banner(c, player, 'foee', 1)
+  if check_challenge(game, game_character(game).lower()) :
+    banner.award_banner(c, player, game_character(game).lower(), 1)
 
 def do_milestone_ghost(c, mile):
   """When you kill a player ghost, you get two clan points! Otherwise this
@@ -314,16 +314,31 @@ def check_challenge(game, challengechar):
   if challengechar == 'grar':
     start = '201407070900'
     end = '201407210900'
-  if challengechar == 'foee':
+  elif challengechar == 'foee':
     start = '201407210900'
     end = '201408040900'
+  elif challengechar == 'ddbe':
+    start = '201406230900'
+    end = '201407070900'
+  elif challengechar == 'hewr':
+    start = '201406090900'
+    end = '201406230900'
+  elif challengechar == 'opvm':
+    start = '201405260900'
+    end = '201406090900'
+  elif challengechar == 'tecj':
+    start = '201405120900'
+    end = '20140526900'
+  elif challengechar == 'vsmo':
+    start = '201404280900'
+    end = '201405120900'
   else:
     return False
 
   if game_start >= start and game_end <= end:
     return True
-
-  return False
+  else:
+    return False
 
 def crunch_winner(c, game):
   """A game that wins could assign a variety of irrevocable points for a
