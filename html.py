@@ -28,7 +28,7 @@ BANNER_IMAGES = \
       'foee': [ 'banner_zin.png', 'FoEE' ],
       'grar': [ 'banner_zin.png', 'GrAr' ],
       'ddbe': [ 'banner_ddbe.png', 'DDBe' ],
-      'hewr': [ 'banner_zin.png', 'HEWr' ],
+      'hewr': [ 'banner_hewr.png', 'HEWr' ],
       'opvm': [ 'banner_zin.png', 'OpVM' ],
       'tecj': [ 'banner_zin.png', 'TeCj' ],
       'vsmo': [ 'banner_zin.png', 'VSMo' ],
