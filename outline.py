@@ -147,7 +147,7 @@ def do_milestone_rune(c, mile):
     banner.award_banner(c, mile['name'], 'vehumet', 1)
   if query.is_unbeliever(c, mile):
     banner.award_banner(c, mile['name'], 'trog', 2)
-  if check_challenge(mile['char'].lower(), mile['start'], mile['end']) :
+  if check_challenge(mile['char'].lower(), mile['start'], mile['time']) :
     banner.award_banner(c, player, mile['char'].lower(), 1)
 
 def do_milestone_ghost(c, mile):
