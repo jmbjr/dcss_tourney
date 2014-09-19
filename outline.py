@@ -147,8 +147,8 @@ def do_milestone_rune(c, mile):
     banner.award_banner(c, mile['name'], 'vehumet', 1)
   if query.is_unbeliever(c, mile):
     banner.award_banner(c, mile['name'], 'trog', 2)
-  if check_challenge(game, game_character(game).lower()) :
-    banner.award_banner(c, player, game_character(game).lower(), 1)
+  if check_challenge(mile['char'].lower(), mile['start'], mile['end']) :
+    banner.award_banner(c, player, mile['char'].lower(), 1)
 
 def do_milestone_ghost(c, mile):
   """When you kill a player ghost, you get two clan points! Otherwise this
@@ -305,12 +305,7 @@ def game_start_time(g):
 def game_character(g):
   return g['char']
 
-def check_challenge(game, challengechar):
-  player = game['name']
-  charabbrev = game_character(game)
-  game_start = game_start_time(game)
-  game_end = game_end_time(game)
-
+def check_challenge(challengechar, game_start, game_end):
   if challengechar == 'grar':
     start = '201407070900'
     end = '201407210900'
@@ -350,7 +345,7 @@ def crunch_winner(c, game):
   game_end = game_end_time(game)
   
 # MFC challenge combo wins
-  if check_challenge(game, charabbrev.lower()):
+  if check_challenge(charabbrev.lower(), game_start, game_end):
     banner.award_banner(c, player, charabbrev.lower(), 2)
 
   # 20 clan points for first win for a particular combo in the tournament.
