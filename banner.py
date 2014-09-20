@@ -3,6 +3,7 @@
 from loaddb import query_first_def, query_first, query_do, query_rows, query_rows_with_ties
 import crawl
 import query
+from logging import debug, info, warn, error
 
 def player_has_banner(c, player, banner, prestige):
   return query_first_def(c, None,
@@ -44,7 +45,11 @@ def process_banners(c, player):
       banner[1](c, player)
 
 def assign_challenge_winner_banners(c):
-  award_banner(c, query.challenge_top_score(c, 'hewr', '201406090900', '201406230900'), 'hewr', 3)
+  player =query.challenge_top_score(c, 'hewr', '201406090900', '201406230900')
+  if player:
+    name = player[0]
+    info("awarding hewr lvl 3 banner to: %s" % name)
+    award_banner(c, name, 'hewr', 3)
 
 def assign_top_player_banners(c):
   rows = query_rows_with_ties(c, '''SELECT name, score_full

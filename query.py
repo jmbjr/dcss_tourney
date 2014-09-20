@@ -219,9 +219,9 @@ def player_top_scores(c, limit=5):
 def challenge_top_score(c, charabbrev, game_start, game_end):
   return query_rows(c, '''SELECT player
                             FROM games
-                           WHERE charabbrev = %s AND start_time >= %s AND end_time <= %s
+                           WHERE charabbrev = %s
                         ORDER BY score DESC
-                           LIMIT 1 ''', charabbrev, game_start, game_end)
+                           LIMIT 1 ''', charabbrev)
 
 def player_last_started_win(c):
   return query_rows(c, '''SELECT player, end_time FROM last_started_win''')
