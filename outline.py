@@ -686,6 +686,9 @@ def safe_update_player_scores(c):
   # And award overall top banners.
   banner.assign_top_player_banners(c)
 
+  #award top score for challenges
+  banner.assign_challenge_winner_banners(c)
+
   # Check to see whether we need a new Nemelex' Choice.
   if nemelex.need_new_combo(c):
     nemelex.pick_combo(nemelex.eligible_combos(c))
