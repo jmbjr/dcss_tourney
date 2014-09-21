@@ -45,31 +45,32 @@ def process_banners(c, player):
       banner[1](c, player)
 
 def assign_challenge_winner_banners(c):
-  player =query.challenge_top_score(c, 'foee', '201407210900', '201408040900')
+#times are in raw format. months begin at 0 and add two more digits at end
+  player =query.challenge_top_score(c, 'foee', '20140621090000', '20140704090000')
   if player:
     award_banner(c, player[0], 'foee', 3, temp=True)
 
-  player =query.challenge_top_score(c, 'grar', '201407070900', '201407210900')
+  player =query.challenge_top_score(c, 'grar', '20140607090000', '20140621090000')
   if player:
     award_banner(c, player[0], 'grar', 3, temp=True)
 
-  player =query.challenge_top_score(c, 'ddbe', '201406230900', '201407070900')
+  player =query.challenge_top_score(c, 'ddbe', '20140523090000', '20140607090000')
   if player:
     award_banner(c, player[0], 'ddbe', 3, temp=True)
 
-  player =query.challenge_top_score(c, 'hewr', '201406090900', '201406230900')
+  player =query.challenge_top_score(c, 'hewr', '20140509090000', '20140523090000')
   if player:
     award_banner(c, player[0], 'hewr', 3, temp=True)
 
-  player =query.challenge_top_score(c, 'opvm', '201405260900', '201406090900')
+  player =query.challenge_top_score(c, 'opvm', '20140426090000', '20140509090000')
   if player:
     award_banner(c, player[0], 'opvm', 3, temp=True)
 
-  player =query.challenge_top_score(c, 'tecj', '201405120900', '201405260900')
+  player =query.challenge_top_score(c, 'tecj', '20140412090000', '20140426090000')
   if player:
     award_banner(c, player[0], 'tecj', 3, temp=True)
 
-  player =query.challenge_top_score(c, 'vsmo', '201404280900', '201405120900')
+  player =query.challenge_top_score(c, 'vsmo', '20140328090000', '20140412090000')
   if player:
     award_banner(c, player[0], 'vsmo', 3, temp=True)
 
