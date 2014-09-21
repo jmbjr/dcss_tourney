@@ -45,11 +45,33 @@ def process_banners(c, player):
       banner[1](c, player)
 
 def assign_challenge_winner_banners(c):
+  player =query.challenge_top_score(c, 'foee', '201407210900', '201408040900')
+  if player:
+    award_banner(c, player[0], 'foee', 3, temp=True)
+
+  player =query.challenge_top_score(c, 'grar', '201407070900', '201407210900')
+  if player:
+    award_banner(c, player[0], 'grar', 3, temp=True)
+
+  player =query.challenge_top_score(c, 'ddbe', '201406230900', '201407070900')
+  if player:
+    award_banner(c, player[0], 'ddbe', 3, temp=True)
+
   player =query.challenge_top_score(c, 'hewr', '201406090900', '201406230900')
   if player:
-    name = player[0]
-    info("awarding hewr lvl 3 banner to: %s" % name)
-    award_banner(c, name, 'hewr', 3)
+    award_banner(c, player[0], 'hewr', 3, temp=True)
+
+  player =query.challenge_top_score(c, 'opvm', '201405260900', '201406090900')
+  if player:
+    award_banner(c, player[0], 'opvm', 3, temp=True)
+
+  player =query.challenge_top_score(c, 'tecj', '201405120900', '201405260900')
+  if player:
+    award_banner(c, player[0], 'tecj', 3, temp=True)
+
+  player =query.challenge_top_score(c, 'vsmo', '201404280900', '201405120900')
+  if player:
+    award_banner(c, player[0], 'vsmo', 3, temp=True)
 
 def assign_top_player_banners(c):
   rows = query_rows_with_ties(c, '''SELECT name, score_full

@@ -217,7 +217,7 @@ def player_top_scores(c, limit=5):
                            LIMIT %d''' % limit)
 
 def challenge_top_score(c, charabbrev, game_start, game_end):
-  return query_rows(c, '''SELECT player
+  return query_row(c, '''SELECT player
                             FROM games
                            WHERE charabbrev = %s
                         ORDER BY score DESC

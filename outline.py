@@ -306,12 +306,12 @@ def game_character(g):
   return g['char']
 
 def check_challenge(challengechar, game_start, game_end):
-  if challengechar == 'grar':
-    start = '201407070900'
-    end = '201407210900'
-  elif challengechar == 'foee':
+  if challengechar == 'foee':
     start = '201407210900'
     end = '201408040900'
+  elif challengechar == 'grar':
+    start = '201407070900'
+    end = '201407210900'
   elif challengechar == 'ddbe':
     start = '201406230900'
     end = '201407070900'
@@ -596,6 +596,9 @@ def check_temp_trophies(c, pmap):
         break
 
 def check_banners(c):
+  #award top score for challenges
+  banner.assign_challenge_winner_banners(c)
+
   award_player_banners(c, 'zin',
                        query_first_col(c, '''SELECT player
                                              FROM all_hellpan_kills'''),
@@ -685,9 +688,6 @@ def safe_update_player_scores(c):
 
   # And award overall top banners.
   banner.assign_top_player_banners(c)
-
-  #award top score for challenges
-  banner.assign_challenge_winner_banners(c)
 
   # Check to see whether we need a new Nemelex' Choice.
   if nemelex.need_new_combo(c):
