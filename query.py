@@ -1449,7 +1449,7 @@ def get_player_banners(c, player):
                        player)
   if len(banners) > 0:
     for i in range(len(banners)):
-      if banners[i][1] <= 3:
+      if banners[i][1] <= 30:
         i = i-1
         break
     if i < len(banners) - 1:
