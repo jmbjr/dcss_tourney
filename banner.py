@@ -48,31 +48,31 @@ def assign_challenge_winner_banners(c):
 #remember to add two more digits at end of times. NOT raw format (months start at 1)
   player =query.challenge_top_score(c, 'foee', '20140721090000', '20140804090000')
   if player:
-    award_banner(c, player[0], 'foee', 3, temp=True)
+    award_banner(c, player[0], 'foee', 30, temp=True)
 
   player =query.challenge_top_score(c, 'grar', '20140707090000', '20140721090000')
   if player:
-    award_banner(c, player[0], 'grar', 3, temp=True)
+    award_banner(c, player[0], 'grar', 30, temp=True)
 
   player =query.challenge_top_score(c, 'ddbe', '20140623090000', '20140707090000')
   if player:
-    award_banner(c, player[0], 'ddbe', 3, temp=True)
+    award_banner(c, player[0], 'ddbe', 30, temp=True)
 
   player =query.challenge_top_score(c, 'hewr', '20140609090000', '20140623090000')
   if player:
-    award_banner(c, player[0], 'hewr', 3, temp=True)
+    award_banner(c, player[0], 'hewr', 30, temp=True)
 
   player =query.challenge_top_score(c, 'opvm', '20140526090000', '20140609090000')
   if player:
-    award_banner(c, player[0], 'opvm', 3, temp=True)
+    award_banner(c, player[0], 'opvm', 30, temp=True)
 
   player =query.challenge_top_score(c, 'tecj', '20140512090000', '20140526090000')
   if player:
-    award_banner(c, player[0], 'tecj', 3, temp=True)
+    award_banner(c, player[0], 'tecj', 30, temp=True)
 
   player =query.challenge_top_score(c, 'vsmo', '20140428090000', '20140512090000')
   if player:
-    award_banner(c, player[0], 'vsmo', 3, temp=True)
+    award_banner(c, player[0], 'vsmo', 30, temp=True)
 
 def assign_top_player_banners(c):
   rows = query_rows_with_ties(c, '''SELECT name, score_full
