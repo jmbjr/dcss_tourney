@@ -26,6 +26,8 @@ BANNER_IMAGES = \
       'xom': [ 'banner_xom.png', 'Descent into Madness' ],
       'yredelemnul': [ 'banner_yredelemnul.png', 'The Harvest' ],
       'zin': [ 'banner_zin.png', 'Angel of Justice' ],
+      'vpie' : [ 'banner_vpie.png', 'VpIE' ],
+      'nawz' : [ 'banner_nawz.png', 'NaWz' ],
       '1top_player': [ 'player.png', 'Top Player'],
       '2top_clan':   [ 'clan.png', 'Top Clan' ],
       'header': ['banner_header.png', '' ],
@@ -133,6 +135,16 @@ BANNER_TEXT = \
           'Kill at least one unique pan lord and at least one unique hell lord over the course of the tournament.',
           'Kill all four unique pan lords and all four unique hell lords over the course of the tournament.',
         ],
+      'vpie':
+       [ 'Get a Rune during VpIE challenge!',
+         'Get a Win during VpIE challenge!!',
+         'Get the Highest MFC Score during VpIE challenge!!!',
+       ],
+      'nawz':
+       [ 'Get a Rune during NaWz challenge!',
+         'Get a Win during NaWz challenge!!',
+         'Get the Highest MFC Score during NaWz challenge!!!',
+       ],
       '1top_player':
         [ 'Individual with the most tournament points.',
           'Individual with the second-most tournament points.',
