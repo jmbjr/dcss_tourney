@@ -320,7 +320,10 @@ def game_character(g):
   return g['char']
 
 def check_challenge(challengechar, game_start, game_end):
-  if challengechar == 'nawz':
+  if challengechar == 'huwn':
+    start = '201409220900'
+    end =   '201410060900'
+  elif challengechar == 'nawz':
     start = '201408040900'
     end =   '201408180900'
   elif challengechar == 'vpie':

@@ -45,6 +45,10 @@ def process_banners(c, player):
 
 def assign_challenge_winner_banners(c):
 #remember to add two more digits at end of times. NOT raw format (months start at 1)
+  player =query.challenge_top_score(c, 'huwn', '20140922090000', '20141006090000')
+  if player:
+    award_banner(c, player[0], 'huwn', 30, temp=True)
+
   player =query.challenge_top_score(c, 'vpie', '20140818090000', '20140901090000')
   if player:
     award_banner(c, player[0], 'vpie', 30, temp=True)
