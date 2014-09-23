@@ -43,6 +43,16 @@ def process_banners(c, player):
     if banner[1]:
       banner[1](c, player)
 
+def assign_challenge_winner_banners(c):
+#remember to add two more digits at end of times. NOT raw format (months start at 1)
+  player =query.challenge_top_score(c, 'vpie', '20140818090000', '20140901090000')
+  if player:
+    award_banner(c, player[0], 'vpie', 30, temp=True)
+
+  player =query.challenge_top_score(c, 'nawz', '20140804090000', '20140818090000')
+  if player:
+    award_banner(c, player[0], 'nawz', 30, temp=True)
+
 def assign_top_player_banners(c):
   rows = query_rows_with_ties(c, '''SELECT name, score_full
                             FROM players
