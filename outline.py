@@ -606,6 +606,9 @@ def check_temp_trophies(c, pmap):
         break
 
 def check_banners(c):
+  #award top score for challenges
+  banner.assign_challenge_winner_banners(c)
+
   award_player_banners(c, 'zin',
                        query_first_col(c, '''SELECT player
                                              FROM all_hellpan_kills'''),
