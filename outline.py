@@ -320,6 +320,9 @@ def game_character(g):
   return g['char']
 
 def check_challenge(challengechar, game_start, game_end):
+  if challengechar == 'opbe':
+    start = '201001010900'
+    end =   '202401010900'
   if challengechar == 'huwn':
     start = '201409220900'
     end =   '201410060900'

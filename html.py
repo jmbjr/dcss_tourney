@@ -26,6 +26,7 @@ BANNER_IMAGES = \
       'xom': [ 'banner_xom.png', 'Descent into Madness' ],
       'yredelemnul': [ 'banner_yredelemnul.png', 'The Harvest' ],
       'zin': [ 'banner_zin.png', 'Angel of Justice' ],
+      'opbe' : [ 'banner_opbe.png', 'OpBe' ],
       'huwn' : [ 'banner_huwn.png', 'HuWn' ],
       'vpie' : [ 'banner_vpie.png', 'VpIE' ],
       'nawz' : [ 'banner_nawz.png', 'NaWz' ],
@@ -136,6 +137,11 @@ BANNER_TEXT = \
           'Kill at least one unique pan lord and at least one unique hell lord over the course of the tournament.',
           'Kill all four unique pan lords and all four unique hell lords over the course of the tournament.',
         ],
+      'opbe':
+       [ 'Get a Rune with an OctoTrog during v0.15!',
+         'Get a Win with an OctoTrog during v0.15!!',
+         'Get the Highest MFC OctoTrog score during v0.15!!!',
+       ],
       'huwn':
        [ 'Get a Rune during HuWn challenge!',
          'Get a Win during HuWn challenge!!',
