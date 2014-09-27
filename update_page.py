@@ -48,6 +48,7 @@ def player_pages(c):
   render(c, 'combo-scoreboard')
   render(c, 'combo-leaders')
   render(c, 'killers')
+  render(c, 'challenge')
   render(c, 'gkills')
   for p in query.get_players(c):
     player_page(c, p)
