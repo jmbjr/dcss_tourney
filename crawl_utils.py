@@ -5,7 +5,7 @@ import fcntl
 import sys
 
 # Update every so often (seconds)
-UPDATE_INTERVAL = 7 * 60
+UPDATE_INTERVAL = 60
 
 # Are we testing locally, or do we want output suitable for a website?
 # Test whether our username is the same that is used on the server.
