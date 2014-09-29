@@ -18,7 +18,7 @@
        best_games = []
 
    recent_games = query.find_games(c, player = player, sort_max = 'end_time',
-                                   limit = 9)
+                                   limit = 9999)
 
    streak_games = query.get_player_best_streak_games(c, player)
 
