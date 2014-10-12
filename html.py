@@ -27,6 +27,7 @@ BANNER_IMAGES = \
       'yredelemnul': [ 'banner_yredelemnul.png', 'The Harvest' ],
       'zin': [ 'banner_zin.png', 'Angel of Justice' ],
       'opbe' : [ 'banner_opbe.png', 'OpBe' ],
+      'mfsk' : [ 'banner_mfsk.png', 'MfSk' ],
       'huwn' : [ 'banner_huwn.png', 'HuWn' ],
       'vpie' : [ 'banner_vpie.png', 'VpIE' ],
       'nawz' : [ 'banner_nawz.png', 'NaWz' ],
@@ -141,6 +142,11 @@ BANNER_TEXT = \
        [ 'Get a Rune with an OctoTrog during v0.15!',
          'Get a Win with an OctoTrog during v0.15!!',
          'Get the Highest MFC OctoTrog score during v0.15!!!',
+       ],
+      'mfsk':
+       [ 'Get a Rune during MfSk challenge!',
+         'Get a Win during MfSk challenge!!',
+         'Get the Highest MFC Score during MfSk challenge!!!',
        ],
       'huwn':
        [ 'Get a Rune during HuWn challenge!',

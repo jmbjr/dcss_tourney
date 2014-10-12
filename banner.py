@@ -49,6 +49,11 @@ def assign_challenge_winner_banners(c):
   if player:
     award_banner(c, player[0], 'opbe', 33, temp=True)
 
+  player =query.challenge_top_score(c, 'mfsk', '20141006090000', '20141020090000')
+  if player:
+    award_banner(c, player[0], 'mfsk', 30, temp=True)
+
+
   player =query.challenge_top_score(c, 'huwn', '20140922090000', '20141006090000')
   if player:
     award_banner(c, player[0], 'huwn', 30, temp=True)
