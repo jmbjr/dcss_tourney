@@ -15,7 +15,7 @@ import sys
 from test_data import USE_TEST, TEST_YEAR, TEST_VERSION, TEST_START_TIME, TEST_END_TIME, TEST_HARE_START_TIME, TEST_LOGS, TEST_MILESTONES, TEST_CLAN_DEADLINE
 
 T_YEAR = TEST_YEAR or '2014'
-T_VERSION = TEST_VERSION or '0.15'
+T_VERSION = TEST_VERSION or '0.16'
 
 # Start and end of the tournament, UTC.
 START_TIME = TEST_START_TIME or ('200004112000')
@@ -25,7 +25,7 @@ END_TIME   = TEST_END_TIME or ('202004272000')
 CLAN_DEADLINE = (TEST_CLAN_DEADLINE or
                 datetime.datetime(2000, 1, 1, 1)) # Apr 19, 20:00
 
-WHITELISTFILE = 'player-whitelist.txt'
+WHITELISTFILE = ''
 
 DATE_FORMAT = '%Y%m%d%H%M'
 
@@ -45,30 +45,18 @@ RHF = 'http://rl.heh.fi/'
 # being the URL to wget -c from.
 
 LOGS = TEST_LOGS or [
-         ('cao-logfile-0.15', CAO + 'logfile15'),
-         ('cdo-logfile-0.15', CDO + 'allgames-0.15.txt'),
-#         ('cln-logfile-0.15', CLN + 'meta/0.15/logfile'),
-#         ('rhf-logfile-0.15', RHF + 'meta/crawl-0.15/logfile'),
-#         ('cbro-logfile-0.15', CBRO + 'meta/0.15/logfile'),
-         ('ckr-logfile-0.15', CKR + 'www/0.15/logfile'),
-         ('cszo-logfile-0.15', CSZO + 'meta/0.15/logfile'),
-# this line should be used on CSZO instead:
-         'cbro-logfile-0.15']
+	 'cbro-logfile-0.16-faithful',
+         'cbro-logfile-0.16-no_backtracking_god',
+         'cbro-logfile-0.16-salamander']
 
 MILESTONES = TEST_MILESTONES or [
-         ('cao-milestones-0.15', CAO + 'milestones15'),
-         ('cdo-milestones-0.15', CDO + 'milestones-0.15.txt'),
-#         ('cln-milestones-0.15', CLN + 'meta/0.15/milestones'),
-#         ('rhf-milestones-0.15', RHF + 'meta/crawl-0.15/milestones'),
-#         ('cbro-milestones-0.15', CBRO + 'meta/0.15/milestones'),
-         ('ckr-milestones-0.15', CKR + 'www/0.15/milestones'),
-         ('cszo-milestones-0.15', CSZO + 'meta/0.15/milestones'),
-# this line should be used on CSZO instead:
-         'cbro-milestones-0.15']
+         'cbro-milestones-0.16-faithful',
+	 'cbro-milestones-0.16-no_backtracking_god',
+         'cbro-milestones-0.16-salamander']
 
 BLACKLIST_FILE = 'blacklist.txt'
 EXTENSION_FILE = 'modules.ext'
-TOURNAMENT_DB = 'tournament15'
+TOURNAMENT_DB = 'tournament16e'
 COMMIT_INTERVAL = 3000
 # These rcfiles need to be updated from the servers every few hours.
 CRAWLRC_DIRECTORY_LIST = ['rcfiles-cszo-0.15/','rcfiles-cao-0.15/','rcfiles-cbro-0.15/','rcfiles-cdo-0.15/','rcfiles-ckr-0.15/','rcfiles-cln-0.15/']

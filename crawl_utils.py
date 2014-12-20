@@ -10,12 +10,12 @@ UPDATE_INTERVAL = 60
 # Are we testing locally, or do we want output suitable for a website?
 # Test whether our username is the same that is used on the server.
 LOCAL_TEST = ('crawl-dev' != os.environ.get('USER'))
-WEB_BASE = 'http://crawl.berotato.org/crawl/mfcwc/0.15'
+WEB_BASE = 'http://crawl.berotato.org/crawl/experimentals/0.16'
 
 LOCK = None
-BASEDIR = LOCAL_TEST and os.environ['HOME'] or '/home/crawl-dev/tourney/0.15'
+BASEDIR = LOCAL_TEST and os.environ['HOME'] or '/home/crawl-dev/tourney/0.16_experimental'
 LOCKFILE = BASEDIR + '/tourney-py.lock'
-SCORE_FILE_DIR = 'html.tourney0.15'
+SCORE_FILE_DIR = 'html.tourney0.16'
 
 SCORE_CSS = 'tourney-score.css'
 SCORE_CSS_PATH = SCORE_FILE_DIR + "/" + SCORE_CSS

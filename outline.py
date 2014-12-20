@@ -156,8 +156,6 @@ def do_milestone_rune(c, mile):
     if rune != 'slimy':
       if mile['potionsused'] == 0 and mile['scrollsused'] == 0:
         banner.award_banner(c, mile['name'], 'vehumet', 3)
-  if check_challenge(mile['char'].lower(), mile['start'], mile['time']):
-    banner.award_banner(c, player, mile['char'].lower(), 10)
 
 def do_milestone_ghost(c, mile):
   """When you kill a player ghost, you get two clan points! Otherwise this
@@ -319,29 +317,6 @@ def game_start_time(g):
 def game_character(g):
   return g['char']
 
-def check_challenge(challengechar, game_start, game_end):
-  if challengechar == 'opbe':
-    start = '201001010900'
-    end =   '202401010900'
-  elif challengechar == 'mfsk':
-    start = '201410060900'
-    end =   '201410200900'
-  elif challengechar == 'huwn':
-    start = '201409220900'
-    end =   '201410060900'
-  elif challengechar == 'nawz':
-    start = '201408040900'
-    end =   '201408180900'
-  elif challengechar == 'vpie':
-    start = '201408180900'
-    end =   '201409010900'
-  else:
-    return False
-
-  if game_start >= start and game_end <= end:
-    return True
-  else:
-    return False
 
 def crunch_winner(c, game):
   """A game that wins could assign a variety of irrevocable points for a
@@ -352,9 +327,6 @@ def crunch_winner(c, game):
   game_start = game_start_time(game)
   game_end = game_end_time(game)
 
-# MFC challenge combo wins
-  if check_challenge(charabbrev.lower(), game_start, game_end):
-    banner.award_banner(c, player, charabbrev.lower(), 20)
 
   # 20 clan points for first win for a particular combo in the tournament.
   if query.first_win_for_combo(c, charabbrev, game_end):
@@ -612,8 +584,6 @@ def check_temp_trophies(c, pmap):
         break
 
 def check_banners(c):
-  #award top score for challenges
-  banner.assign_challenge_winner_banners(c)
 
   award_player_banners(c, 'zin',
                        query_first_col(c, '''SELECT player
