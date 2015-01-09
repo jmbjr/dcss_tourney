@@ -63,3 +63,42 @@ Other things
 
 * The file tourney-guide.txt contains a checklist of all the steps involved in
   organizing and running a tournament each new version.
+  
+
+John's cheatsheet on setting up a new branch:
+
+start up mysql:
+crawl-dev@www:~/tourney/dbro$ mysql -u root -p
+Enter mysql password: 
+
+create a new DB that will be used in loaddb.py
+
+mysql> CREATE DATABASE tournamentdbro;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> USE tournamentdbro;
+Database changed
+mysql> GRANT ALL PRIVILEGES ON tournamentdbro.* To 'crawl'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> exit
+
+you have to create a user named crawl without a password, but I can't remember how to do it.
+
+run this command to reset the db
+
+crawl-dev@www:~/tourney/dbro$ mysql -ucrawl -p tournamentdbro < database.sql
+
+edit the whitelist and make other required changes (see https://github.com/jmbjr/dcss_tourney/commit/0031de903075ab459ebde894f91a1415331eaa77 for most of the stuff you should change)
+(requires pointing to the correct sources for scores/stones/logs)
+
+to initialize the db:
+run $ python loaddb.py
+
+then to continuously update the data:
+run $ python taildb.py
+
+(note, to make any changes to the db, eg if you add a new challenge, new person on the whitelist, or new sources, you will need to kill taildb.py, blank out the db again, run loaddb.py, and then taildb.py again)
