@@ -45,30 +45,14 @@ RHF = 'http://rl.heh.fi/'
 # being the URL to wget -c from.
 
 LOGS = TEST_LOGS or [
-         ('cao-logfile-0.15', CAO + 'logfile15'),
-         ('cdo-logfile-0.15', CDO + 'allgames-0.15.txt'),
-         ('cln-logfile-0.15', CLN + 'meta/0.15/logfile'),
-#         ('rhf-logfile-0.15', RHF + 'meta/crawl-0.15/logfile'),
-#         ('cbro-logfile-0.15', CBRO + 'meta/0.15/logfile'),
-         ('ckr-logfile-0.15', CKR + 'www/0.15/logfile'),
-         ('cszo-logfile-0.15', CSZO + 'meta/0.15/logfile'),
-# this line should be used on CSZO instead:
-         'cbro-logfile-0.15']
+         'dbro-logfile-bloaxcrawl', 'dbro-logfile-megavamps']
 
 MILESTONES = TEST_MILESTONES or [
-         ('cao-milestones-0.15', CAO + 'milestones15'),
-         ('cdo-milestones-0.15', CDO + 'milestones-0.15.txt'),
-         ('cln-milestones-0.15', CLN + 'meta/0.15/milestones'),
-#         ('rhf-milestones-0.15', RHF + 'meta/crawl-0.15/milestones'),
-#         ('cbro-milestones-0.15', CBRO + 'meta/0.15/milestones'),
-         ('ckr-milestones-0.15', CKR + 'www/0.15/milestones'),
-         ('cszo-milestones-0.15', CSZO + 'meta/0.15/milestones'),
-# this line should be used on CSZO instead:
-         'cbro-milestones-0.15']
+         'dbro-milestones-bloaxcrawl', 'dbro-milestones-megavamps']
 
 BLACKLIST_FILE = 'blacklist.txt'
 EXTENSION_FILE = 'modules.ext'
-TOURNAMENT_DB = 'tournament15'
+TOURNAMENT_DB = 'tournamentdbro'
 COMMIT_INTERVAL = 3000
 # These rcfiles need to be updated from the servers every few hours.
 CRAWLRC_DIRECTORY_LIST = ['rcfiles-cszo-0.15/','rcfiles-cao-0.15/','rcfiles-cbro-0.15/','rcfiles-cdo-0.15/','rcfiles-ckr-0.15/','rcfiles-cln-0.15/']
@@ -735,10 +719,10 @@ def is_not_tourney(game):
   end = game.get('end') or game.get('time') or start
 
   # Is this the game version we want?
-  if not game['v'].startswith(GAME_VERSION):
-    return True
+#  if not game['v'].startswith(GAME_VERSION):
+#    return True
 
-  return start < START_TIME or end >= END_TIME
+#  return start < START_TIME or end >= END_TIME
 
 def time_in_hare_window():
   nowtime = datetime.datetime.utcnow().strftime(DATE_FORMAT)

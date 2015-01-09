@@ -1,7 +1,7 @@
 <%
    from crawl_utils import XXX_TOURNEY_BASE
    from test_data import USE_TEST
-   version = '0.15'
+   version = 'dbro'
    year    = '2014'
    title   = "MeFightClub Crawl Version %s Challenge Summary Website!" % version
  %>
@@ -21,7 +21,7 @@
         <div class="heading">
           <h1>${title}</h1>
           <p class="fineprint">
-          This website logs ALL MFC v0.15 games played on all public servers!
+          This website logs ALL MFC vdbro games played on all public servers!
           </p>
         </div>
         <hr>
@@ -41,11 +41,11 @@
           </p>
 
           <p>
-            All points and banners on this site correspond to those in effect for the 0.15 official crawl tourney.
+            All points and banners on this site correspond to those in effect for the dbro official crawl tourney.
             SOON the MeFightClub weekly/bi-weekly challenges will also be present on the site, with corresponding banners!
             NOTE: there is currently NO clan support. That may come one day, but if you want a clan, wait for the official tournaments!
           <p>
-            EVERYTHING BELOW THIS LINE IS VERBATIM FROM THE 0.15 CRAWL TOURNAMENT! 
+            EVERYTHING BELOW THIS LINE IS VERBATIM FROM THE dbro CRAWL TOURNAMENT! 
             For players who participated in previous
             tournaments, please look at
             the <a href="#changes">Changes</a> section for a list of

@@ -10,12 +10,12 @@ UPDATE_INTERVAL = 60
 # Are we testing locally, or do we want output suitable for a website?
 # Test whether our username is the same that is used on the server.
 LOCAL_TEST = ('crawl-dev' != os.environ.get('USER'))
-WEB_BASE = 'http://crawl.berotato.org/crawl/mfcwc/0.15'
+WEB_BASE = 'http://crawl.berotato.org/crawl/mfcwc/dbro'
 
 LOCK = None
-BASEDIR = LOCAL_TEST and os.environ['HOME'] or '/home/crawl-dev/tourney/0.15'
+BASEDIR = LOCAL_TEST and os.environ['HOME'] or '/home/crawl-dev/tourney/dbro'
 LOCKFILE = BASEDIR + '/tourney-py.lock'
-SCORE_FILE_DIR = 'html.tourney0.15'
+SCORE_FILE_DIR = 'html.tourney-dbro'
 
 SCORE_CSS = 'tourney-score.css'
 SCORE_CSS_PATH = SCORE_FILE_DIR + "/" + SCORE_CSS
@@ -28,7 +28,7 @@ CAO_MORGUE_BASE = 'http://crawl.akrasiac.org/rawdata'
 CDO_MORGUE_BASE = 'http://crawl.develz.org/morgues/0.15'
 CLN_MORGUE_BASE = 'http://crawl.lantea.net/crawl/morgue'
 CSZO_MORGUE_BASE = 'http://dobrazupa.org/morgue'
-CBRO_MORGUE_BASE = 'http://crawl.berotato.org/crawl/morgue'
+CBRO_MORGUE_BASE = 'http://crawl.berotato.org/crawl/dev/morgue'
 CKR_MORGUE_BASE = 'http://kr.dobrazupa.org/morgue/0.15'
 RHF_MORGUE_BASE = 'http://rl.heh.fi/morgue'
 
@@ -176,6 +176,7 @@ def morgue_link(xdict):
     base = CBRO_MORGUE_BASE
   else:
     base = CKR_MORGUE_BASE
+  base = CBRO_MORGUE_BASE
   return "%s/%s/morgue-%s-%s.txt" % (base, name, name, stime)
 
 def linked_text(key, link_fn, text=None):
