@@ -49,6 +49,7 @@ LOGS = TEST_LOGS or [
          'cbro-logfile-0.16-cards',
          'cbro-logfile-0.16-evoker-god',
          'cbro-logfile-0.16-shoals-lite',
+         'cbro-logfile-0.16-bearkin',
          'cbro-logfile-0.16-no_backtracking_god',
          'cbro-logfile-0.16-salamander']
 
@@ -57,6 +58,7 @@ MILESTONES = TEST_MILESTONES or [
 	 'cbro-milestones-0.16-cards',
 	 'cbro-milestones-0.16-evoker-god',
 	 'cbro-milestones-0.16-shoals-lite',
+	 'cbro-milestones-0.16-bearkin',
 	 'cbro-milestones-0.16-no_backtracking_god',
          'cbro-milestones-0.16-salamander']
 
