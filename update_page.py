@@ -49,8 +49,16 @@ def player_pages(c):
   render(c, 'combo-leaders')
   render(c, 'killers')
   render(c, 'gkills')
+  render(c, 'branches')
   for p in query.get_players(c):
     player_page(c, p)
+  branch_page(c,'bearkin')
+  branch_page(c,'cards')
+  branch_page(c,'evoker-god')
+  branch_page(c,'faithful')
+  branch_page(c,'no_backtracking_god')
+  branch_page(c,'salamander')
+  branch_page(c,'shoals-lite')
 
 def index_page(c):
   info("Updating index page")
@@ -73,6 +81,12 @@ def player_page(c, player):
   render(c, 'player',
          dest = ('%s/%s' % (crawl_utils.PLAYER_BASE, player.lower())),
          pars = { 'player' : player })
+
+def branch_page(c, branch):
+  info("Updating explbr page for %s" % branch)
+  render(c, 'branch', 
+         dest = ('%s/%s' % (crawl_utils.BRANCH_BASE, branch.lower())),
+	 pars = { 'branch' : branch })
 
 # Update tourney overview every 5 mins.
 INTERVAL = crawl_utils.UPDATE_INTERVAL

@@ -20,6 +20,7 @@ SCORE_FILE_DIR = 'html.tourney0.16'
 SCORE_CSS = 'tourney-score.css'
 SCORE_CSS_PATH = SCORE_FILE_DIR + "/" + SCORE_CSS
 PLAYER_BASE = 'players'
+BRANCH_BASE = 'branches'
 CLAN_BASE = 'clans'
 PLAYER_FILE_DIR = SCORE_FILE_DIR + '/' + PLAYER_BASE
 CLAN_FILE_DIR = SCORE_FILE_DIR + '/' + CLAN_BASE

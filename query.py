@@ -197,6 +197,8 @@ def first_win_for_combo(c, charabbrev, game_end):
                               AND end_time < %s""",
                      charabbrev, game_end) == 0
 
+
+
 def get_player_won_gods(c, player):
   """Returns the names of all the gods that the player has won games with,
 wins counting only if the player has not switched gods during the game."""
@@ -650,8 +652,11 @@ def find_games(c, sort_min=None, sort_max=None, limit=1, **dictionary):
   for key, value in dictionary.items():
     if key == 'before':
       append_where(where, "end_time < %s", value)
+    elif key == 'source_file':
+      append_where(where, "source_file LIKE %s", '%' + value)
     else:
       append_where(where, key + " = %s", value)
+
 
   order_by = ''
   if sort_min:
@@ -745,6 +750,26 @@ def get_clan_stats(c, captain):
                                        AND p.team_captain = %s''',
                                  captain)
   stats['win_perc' ] = "%.2f%%" % calc_perc(stats['won'], stats['played'])
+  return stats
+
+def get_branch_stats(c, name):	
+  stats = { }
+  stats['points'] = 0
+  stats['team_points'] = 0
+
+  # Get win/played stats.
+  stats['won'] = \
+      query_first(c,
+                  """SELECT COUNT(*) FROM games
+                     WHERE source_file LIKE %s AND killertype = 'winning'""",
+                  '%' + name)
+
+  stats['played'] = \
+      query_first(c,
+                  """SELECT COUNT(*) FROM games WHERE source_file LIKE %s""",
+                  '%' + name)
+
+  stats['win_perc'] = "%.2f%%" % calc_perc(stats['won'], stats['played'])
   return stats
 
 def get_player_stats(c, name):

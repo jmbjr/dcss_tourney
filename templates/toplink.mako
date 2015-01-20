@@ -6,7 +6,7 @@
 &nbsp;
 <a href="${XXX_TOURNEY_BASE}/all-players.html">Players</a>
 &nbsp;
-<a href="${XXX_TOURNEY_BASE}/teams.html">Clans</a>
+<a href="${XXX_TOURNEY_BASE}/branches.html">Experimental Branches</a>
 &nbsp;
 <a href="${XXX_TOURNEY_BASE}/combo-leaders.html">Combo Standings</a>
 &nbsp;

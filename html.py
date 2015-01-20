@@ -159,7 +159,8 @@ STOCK_WIN_COLUMNS = \
     ]
 
 EXT_WIN_COLUMNS = \
-    [ ('score', 'Score', True),
+    [ ('player', 'Player'),
+      ('score', 'Score', True),
       ('race', 'Species'),
       ('class', 'Background'),
       ('god', 'God'),
@@ -185,7 +186,8 @@ STOCK_COLUMNS = \
     ]
 
 EXT_COLUMNS = \
-    [ ('score', 'Score', True),
+    [ ('player', 'Player'),
+      ('score', 'Score', True),
       ('race', 'Species'),
       ('class', 'Background'),
       ('god', 'God'),
