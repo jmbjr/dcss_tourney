@@ -21,7 +21,7 @@
           <h1>Misc Branches</h1>
         </div>
         <br>
-        <a href="${XXX_TOURNEY_BASE}/branches/shoals-lite.html">Shoals-Lite</a>
+        <a href="${XXX_TOURNEY_BASE}/branches/shoals-lite.html">Shoals-Lite (obsolte)</a>
         <br>
         <a href="${XXX_TOURNEY_BASE}/branches/cards.html">Cards (obsolete)</a>
         <br>
@@ -36,7 +36,8 @@
         <br>
         <a href="${XXX_TOURNEY_BASE}/branches/bearkin.html">Bearkin</a>
         <br>
-
+        <a href="${XXX_TOURNEY_BASE}/branches/imp.html">Imps</a>
+        <br>
         <div class="heading_left">
           <h1>God Branches</h1>
         </div>

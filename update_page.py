@@ -53,6 +53,7 @@ def player_pages(c):
   for p in query.get_players(c):
     player_page(c, p)
   branch_page(c,'bearkin')
+  branch_page(c,'imp')
   branch_page(c,'cards')
   branch_page(c,'evoker-god')
   branch_page(c,'faithful')
